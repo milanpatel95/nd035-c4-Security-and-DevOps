@@ -1,0 +1,1223 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/mySecondJob
+The recommended git tool is: NONE
+using credential 2fd40538-4014-40f4-b638-14c401d1aa1e
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/mySecondJob/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/milanpatel95/nd035-c4-Security-and-DevOps # timeout=10
+Fetching upstream changes from https://github.com/milanpatel95/nd035-c4-Security-and-DevOps
+ > git --version # timeout=10
+ > git --version # 'git version 2.26.3'
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/milanpatel95/nd035-c4-Security-and-DevOps +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 536cfbcbd58fbc357dbbea224b979beaf9366a3f (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 536cfbcbd58fbc357dbbea224b979beaf9366a3f # timeout=10
+Commit message: "Refactored Code"
+ > git rev-list --no-walk 536cfbcbd58fbc357dbbea224b979beaf9366a3f # timeout=10
+Parsing POMs
+Modules changed, recalculating dependency graph
+Established TCP socket on 43915
+[ECommerceApp] $ java -cp /var/jenkins_home/plugins/maven-plugin/WEB-INF/lib/maven35-agent-1.13.jar:/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Apache_Maven_3.6.3/boot/plexus-classworlds-2.6.0.jar:/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Apache_Maven_3.6.3/conf/logging jenkins.maven3.agent.Maven35Main /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Apache_Maven_3.6.3 /var/jenkins_home/war/WEB-INF/lib/remoting-4.6.jar /var/jenkins_home/plugins/maven-plugin/WEB-INF/lib/maven35-interceptor-1.13.jar /var/jenkins_home/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.13.jar 43915
+<===[JENKINS REMOTING CAPACITY]===>channel started
+Executing Maven:  -B -f /var/jenkins_home/workspace/mySecondJob/ECommerceApp/pom.xml clean install package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:ECommerceApp >----------------------
+[INFO] Building ECommerceApp 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ ECommerceApp ---
+[INFO] Deleting /var/jenkins_home/workspace/mySecondJob/ECommerceApp/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ ECommerceApp ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ ECommerceApp ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to /var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ ECommerceApp ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/mySecondJob/ECommerceApp/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ ECommerceApp ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ ECommerceApp ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.demo.ItemControllerTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.028 s - in com.example.demo.ItemControllerTest
+[INFO] Running com.example.demo.UserControllerTest
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/root/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/root/.m2/repository/org/slf4j/slf4j-log4j12/1.7.30/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+11:34:24.849 [main] DEBUG c.e.demo.controllers.UserController - UserController.findById called for id 1
+11:34:24.855 [main] DEBUG c.e.demo.controllers.UserController - UserController.createUser called for username testUsername
+11:34:24.859 [main] ERROR c.e.demo.controllers.UserController - Error creating user testUsername because of invalid passwords
+11:34:24.861 [main] DEBUG c.e.demo.controllers.UserController - UserController.createUser called for username testUsername
+11:34:24.861 [main] ERROR c.e.demo.controllers.UserController - Error creating user testUsername because of invalid passwords
+11:34:24.863 [main] DEBUG c.e.demo.controllers.UserController - UserController.findById called for id 0
+11:34:24.866 [main] DEBUG c.e.demo.controllers.UserController - UserController.createUser called for username testusername
+11:34:24.872 [main] INFO  c.e.demo.controllers.UserController - New user created with username testusername
+11:34:24.874 [main] DEBUG c.e.demo.controllers.UserController - UserController.findByUserName called for username someone
+11:34:24.876 [main] DEBUG c.e.demo.controllers.UserController - UserController.findByUserName called for username testusername
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.643 s - in com.example.demo.UserControllerTest
+[INFO] Running com.example.demo.ECommerceApplicationTests
+11:34:24.968 [main] DEBUG o.s.t.c.j.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.example.demo.ECommerceApplicationTests]
+11:34:24.970 [main] DEBUG o.s.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+11:34:24.988 [main] DEBUG o.s.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+11:34:25.033 [main] DEBUG o.s.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.demo.ECommerceApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+11:34:25.059 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.ECommerceApplicationTests], using SpringBootContextLoader
+11:34:25.068 [main] DEBUG o.s.t.c.s.AbstractContextLoader - Did not detect default resource location for test class [com.example.demo.ECommerceApplicationTests]: class path resource [com/example/demo/ECommerceApplicationTests-context.xml] does not exist
+11:34:25.069 [main] DEBUG o.s.t.c.s.AbstractContextLoader - Did not detect default resource location for test class [com.example.demo.ECommerceApplicationTests]: class path resource [com/example/demo/ECommerceApplicationTestsContext.groovy] does not exist
+11:34:25.069 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.example.demo.ECommerceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:34:25.070 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.demo.ECommerceApplicationTests]: ECommerceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:34:25.158 [main] DEBUG o.s.t.c.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.demo.ECommerceApplicationTests]
+11:34:25.322 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes/com/example/demo/ECommerceApplication.class]
+11:34:25.324 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.demo.ECommerceApplication for test class com.example.demo.ECommerceApplicationTests
+11:34:25.487 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.demo.ECommerceApplicationTests]: using defaults.
+11:34:25.489 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener]
+11:34:25.525 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@376a312c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@28d6290, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6ca0256d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5ef0d29e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@38f57b3d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51850751, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ce3db41, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@64df9a61, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@77602954, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@e260766, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2c3dec30, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@34a97744, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4275c20c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7c56e013]
+11:34:25.529 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.demo.ECommerceApplicationTests]
+11:34:25.530 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.demo.ECommerceApplicationTests]
+11:34:25.536 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.demo.ECommerceApplicationTests]
+11:34:25.536 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.demo.ECommerceApplicationTests]
+11:34:25.536 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.demo.ECommerceApplicationTests]
+11:34:25.537 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.demo.ECommerceApplicationTests]
+11:34:25.537 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.demo.ECommerceApplicationTests]
+11:34:25.538 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.demo.ECommerceApplicationTests]
+11:34:25.538 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.demo.ECommerceApplicationTests]
+11:34:25.538 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.demo.ECommerceApplicationTests]
+11:34:25.542 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@533377b testClass = ECommerceApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@3383649e testClass = ECommerceApplicationTests, locations = '{}', classes = '{class com.example.demo.ECommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5674e1f2, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@32f232a5, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@5629510, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7a1a3478], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+11:34:25.546 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.demo.ECommerceApplicationTests]
+11:34:25.547 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.demo.ECommerceApplicationTests]
+11:34:25.581 [main] DEBUG o.s.t.c.s.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+11:34:26.027 [main] DEBUG o.s.b.c.l.ClasspathLoggingApplicationListener - Application started with classpath: [file:/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/surefire/surefirebooter1577794229673172917.jar]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.5.RELEASE)
+
+11:34:26.289 [main] INFO  c.e.demo.ECommerceApplicationTests - Starting ECommerceApplicationTests on e4332dd570f3 with PID 2748 (started by root in /var/jenkins_home/workspace/mySecondJob/ECommerceApp)
+11:34:26.294 [main] DEBUG c.e.demo.ECommerceApplicationTests - Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+11:34:26.299 [main] INFO  c.e.demo.ECommerceApplicationTests - No active profile set, falling back to default profiles: default
+11:34:26.299 [main] DEBUG o.s.boot.SpringApplication - Loading source class com.example.demo.ECommerceApplication
+11:34:26.411 [main] DEBUG o.s.b.c.c.ConfigFileApplicationListener - Loaded config file 'file:/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes/application.properties' (classpath:/application.properties)
+11:34:26.412 [main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5398edd0
+11:34:26.464 [background-preinit] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+11:34:26.486 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+11:34:26.484 [background-preinit] DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+11:34:26.492 [background-preinit] DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+11:34:26.492 [background-preinit] DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+11:34:26.492 [background-preinit] DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+11:34:26.494 [background-preinit] DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+11:34:26.552 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+11:34:26.769 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes/com/example/demo/controllers/CartController.class]
+11:34:26.775 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes/com/example/demo/controllers/ItemController.class]
+11:34:26.776 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes/com/example/demo/controllers/OrderController.class]
+11:34:26.782 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes/com/example/demo/controllers/UserController.class]
+11:34:26.808 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes/com/example/demo/security/UserDetailsServiceImplementor.class]
+11:34:26.824 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes/com/example/demo/security/WebSecurityConfiguration.class]
+11:34:27.510 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.jmx.enabled' in PropertySource 'configurationProperties' with value of type String
+11:34:27.633 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.jmx.enabled' in PropertySource 'configurationProperties' with value of type String
+11:34:28.167 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+11:34:28.203 [main] DEBUG o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for repositories in packages com.example.demo.model.persistence.repositories.
+11:34:28.234 [main] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes/com/example/demo/model/persistence/repositories/CartRepository.class]
+11:34:28.235 [main] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes/com/example/demo/model/persistence/repositories/ItemRepository.class]
+11:34:28.236 [main] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes/com/example/demo/model/persistence/repositories/OrderRepository.class]
+11:34:28.237 [main] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes/com/example/demo/model/persistence/repositories/UserRepository.class]
+11:34:28.393 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 188ms. Found 4 repository interfaces.
+11:34:28.410 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.condition.BeanTypeRegistry'
+11:34:29.420 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'propertySourcesPlaceholderConfigurer'
+11:34:29.445 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor'
+11:34:29.457 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'emBeanDefinitionRegistrarPostProcessor'
+11:34:29.534 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+11:34:29.536 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationBeanFactoryMetadata'
+11:34:29.537 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'preserveErrorControllerTargetClassPostProcessor'
+11:34:29.539 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+11:34:29.543 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+11:34:29.580 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor'
+11:34:29.581 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+11:34:29.582 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+11:34:29.587 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+11:34:29.595 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
+11:34:29.599 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'methodValidationPostProcessor'
+11:34:29.673 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'methodValidationPostProcessor' via factory method to bean named 'environment'
+11:34:29.722 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+11:34:29.785 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dataSourceInitializerPostProcessor'
+11:34:29.797 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'persistenceExceptionTranslationPostProcessor'
+11:34:29.805 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'persistenceExceptionTranslationPostProcessor' via factory method to bean named 'environment'
+11:34:29.821 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'webServerFactoryCustomizerBeanPostProcessor'
+11:34:29.830 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'errorPageRegistrarBeanPostProcessor'
+11:34:29.845 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dataSourceInitializedPublisher'
+11:34:29.849 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'projectingArgumentResolverBeanPostProcessor'
+11:34:29.851 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+11:34:29.852 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+11:34:29.887 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1a2bc60c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:34:29.911 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionAttributeSource'
+11:34:29.918 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionInterceptor'
+11:34:29.993 [main] DEBUG o.s.u.c.s.UiApplicationContextUtils - Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@1b1c538d]
+11:34:30.004 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'entityManagerFactory'
+11:34:30.004 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration'
+11:34:30.005 [main] DEBUG o.s.c.LocalVariableTableParameterNameDiscoverer - Cannot find '.class' file for class [class org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$3902887b] - unable to determine constructor/method parameter names
+11:34:30.007 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dataSource'
+11:34:30.009 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari'
+11:34:30.026 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties'
+11:34:30.121 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'dataSource' via factory method to bean named 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties'
+11:34:30.155 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.h2.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@3d4eac69
+11:34:30.209 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker'
+11:34:30.218 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' via constructor to bean named 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties'
+11:34:30.223 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' via constructor to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@5398edd0'
+11:34:30.242 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties'
+11:34:30.273 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.jpa.hibernate-org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties'
+11:34:30.293 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'dataSource'
+11:34:30.295 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties'
+11:34:30.295 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@7cc9ce8'
+11:34:30.296 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration' via constructor to bean named 'spring.jpa.hibernate-org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties'
+11:34:30.301 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'platformTransactionManagerCustomizers'
+11:34:30.308 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration'
+11:34:30.336 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties'
+11:34:30.373 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hikariPoolDataSourceMetadataProvider'
+11:34:30.373 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration'
+11:34:30.444 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'entityManagerFactoryBuilder'
+11:34:30.448 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jpaVendorAdapter'
+11:34:30.536 [main] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+11:34:30.539 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+11:34:30.548 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:34:30.549 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:34:30.550 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+11:34:30.550 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+11:34:30.550 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+11:34:30.551 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:34:30.551 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+11:34:30.555 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+11:34:30.558 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+11:34:30.558 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+11:34:30.559 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.h2.Driver"
+11:34:30.559 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:34:30.559 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+11:34:30.559 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+11:34:30.560 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+11:34:30.560 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:34:30.560 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:h2:mem:bootapp;DB_CLOSE_DELAY=-1
+11:34:30.561 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:34:30.561 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:34:30.561 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:34:30.562 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+11:34:30.562 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+11:34:30.562 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:34:30.562 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+11:34:30.567 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+11:34:30.567 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:34:30.567 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:34:30.568 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+11:34:30.568 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+11:34:30.568 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+11:34:30.570 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+11:34:30.570 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................"sa"
+11:34:30.571 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:34:30.572 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:34:31.123 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bootapp user=SA
+11:34:31.129 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:34:31.185 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'entityManagerFactoryBuilder' via factory method to bean named 'jpaVendorAdapter'
+11:34:31.204 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'entityManagerFactory' via factory method to bean named 'entityManagerFactoryBuilder'
+11:34:31.214 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.domain.EntityScanPackages'
+11:34:31.229 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+11:34:31.248 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn1: url=jdbc:h2:mem:bootapp user=SA
+11:34:31.249 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn2: url=jdbc:h2:mem:bootapp user=SA
+11:34:31.250 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn3: url=jdbc:h2:mem:bootapp user=SA
+11:34:31.250 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn4: url=jdbc:h2:mem:bootapp user=SA
+11:34:31.251 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn5: url=jdbc:h2:mem:bootapp user=SA
+11:34:31.257 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn6: url=jdbc:h2:mem:bootapp user=SA
+11:34:31.258 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn7: url=jdbc:h2:mem:bootapp user=SA
+11:34:31.259 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn8: url=jdbc:h2:mem:bootapp user=SA
+11:34:31.259 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn9: url=jdbc:h2:mem:bootapp user=SA
+11:34:31.267 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+11:34:31.302 [main] DEBUG o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+11:34:31.353 [main] DEBUG o.h.jpa.internal.util.LogHelper - PersistenceUnitInfo [
+	name: default
+	persistence provider classname: null
+	classloader: sun.misc.Launcher$AppClassLoader@3d4eac69
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: HikariDataSource (HikariPool-1)
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/test-classes/
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		com.example.demo.model.persistence.Cart
+		com.example.demo.model.persistence.Item
+		com.example.demo.model.persistence.User
+		com.example.demo.model.persistence.UserOrder]
+	Mapping files names []
+	Properties []
+11:34:31.380 [main] DEBUG o.h.i.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+11:34:31.387 [main] DEBUG o.h.i.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+11:34:31.395 [main] DEBUG o.h.i.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+11:34:31.533 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+11:34:31.541 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+11:34:31.581 [main] DEBUG o.h.service.spi.ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+11:34:31.629 [main] DEBUG o.h.c.i.RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+11:34:31.631 [main] DEBUG o.h.c.i.RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+11:34:31.656 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+11:34:31.726 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@e829999
+11:34:31.726 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@e829999
+11:34:31.726 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@e829999
+11:34:31.727 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@6f5e16cf
+11:34:31.732 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@56846330
+11:34:31.733 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@30db5536
+11:34:31.734 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@14c141c0
+11:34:31.734 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@14c141c0
+11:34:31.734 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@14c141c0
+11:34:31.735 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@a7cf42f
+11:34:31.736 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@a7cf42f
+11:34:31.738 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@a7cf42f
+11:34:31.739 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@7bdf61ad
+11:34:31.739 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@7bdf61ad
+11:34:31.739 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@7bdf61ad
+11:34:31.741 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@7499eac7
+11:34:31.741 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@7499eac7
+11:34:31.741 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@7499eac7
+11:34:31.742 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@6b4fc2d1
+11:34:31.742 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@6b4fc2d1
+11:34:31.742 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@6b4fc2d1
+11:34:31.744 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@66522ead
+11:34:31.744 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@66522ead
+11:34:31.744 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@66522ead
+11:34:31.745 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@4099209b
+11:34:31.746 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@4099209b
+11:34:31.746 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@4099209b
+11:34:31.747 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@1de0641b
+11:34:31.747 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@1de0641b
+11:34:31.750 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@d88f893
+11:34:31.750 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@d88f893
+11:34:31.752 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@7bc58891
+11:34:31.757 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@7bc58891
+11:34:31.758 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1f43cab7
+11:34:31.759 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@7f353a0f
+11:34:31.767 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@467b0f6e
+11:34:31.768 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@467b0f6e
+11:34:31.771 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@5e230fc6
+11:34:31.771 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@5e230fc6
+11:34:31.772 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@31f295b6
+11:34:31.773 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@31f295b6
+11:34:31.774 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@7ba93755
+11:34:31.779 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@7ba93755
+11:34:31.783 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@2693c618
+11:34:31.783 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@2693c618
+11:34:31.784 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@19bedeb8
+11:34:31.785 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@19bedeb8
+11:34:31.786 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@29fe4840
+11:34:31.787 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@29fe4840
+11:34:31.791 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@553da911
+11:34:31.792 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@553da911
+11:34:31.793 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2e4389ed
+11:34:31.793 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2e4389ed
+11:34:31.795 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@468e8565
+11:34:31.795 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@468e8565
+11:34:31.801 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@2349f14d
+11:34:31.807 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@2349f14d
+11:34:31.809 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@628b819d
+11:34:31.810 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@628b819d
+11:34:31.811 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@628b819d
+11:34:31.812 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@51f95f0d
+11:34:31.816 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@7ebe2e47
+11:34:31.816 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@7ebe2e47
+11:34:31.816 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@7ebe2e47
+11:34:31.817 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@2a7d9b41
+11:34:31.819 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@72bd2871
+11:34:31.819 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@72bd2871
+11:34:31.824 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@40ef0af8
+11:34:31.824 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@40ef0af8
+11:34:31.826 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@413bef78
+11:34:31.829 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@413bef78
+11:34:31.829 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@6435fa1c
+11:34:31.830 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@6435fa1c
+11:34:31.831 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@3a36cd5
+11:34:31.831 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@3a36cd5
+11:34:31.832 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@6f8e9d06
+11:34:31.833 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@733c464f
+11:34:31.834 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@733c464f
+11:34:31.834 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@733c464f
+11:34:31.835 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@5d512ddb
+11:34:31.835 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@5d512ddb
+11:34:31.835 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@5d512ddb
+11:34:31.836 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@5974b7e8
+11:34:31.837 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@2291d9a0
+11:34:31.840 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@60f21960
+11:34:31.840 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@60f21960
+11:34:31.840 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@60f21960
+11:34:31.841 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@3becc950
+11:34:31.842 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@3becc950
+11:34:31.843 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@3becc950
+11:34:31.844 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@52ae997b
+11:34:31.844 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@5856dbe4
+11:34:31.846 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@32d418a9
+11:34:31.846 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@32d418a9
+11:34:31.847 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@43ecfeb5
+11:34:31.848 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@4dadd690
+11:34:31.848 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@4dadd690
+11:34:31.849 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@5eabff6b
+11:34:31.850 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@5eabff6b
+11:34:31.851 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@7af443a3
+11:34:31.855 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@68ddd415
+11:34:31.858 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@66c9b52f
+11:34:31.864 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@14447be
+11:34:31.864 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@14447be
+11:34:31.865 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@5099c59b
+11:34:31.865 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@73c31181
+11:34:31.866 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@3d620a1
+11:34:31.866 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@4f486211
+11:34:31.866 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@51e3d37e
+11:34:31.867 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@3a479fda
+11:34:31.867 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@8a6631b
+11:34:31.867 [main] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@472d0f4
+11:34:31.878 [main] DEBUG o.h.b.internal.BootstrapContextImpl - Injecting JPA temp ClassLoader [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@2ec99035] into BootstrapContext; was [null]
+11:34:31.878 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - ClassLoaderAccessImpl#injectTempClassLoader(org.springframework.instrument.classloading.SimpleThrowawayClassLoader@2ec99035) [was null]
+11:34:31.879 [main] DEBUG o.h.b.internal.BootstrapContextImpl - Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@71179b6f] into BootstrapContext; was [null]
+11:34:31.879 [main] DEBUG o.h.b.internal.BootstrapContextImpl - Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@13bdf540] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@526e8108]
+11:34:31.937 [main] DEBUG o.h.b.internal.BootstrapContextImpl - Injecting JPA temp ClassLoader [null] into BootstrapContext; was [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@2ec99035]
+11:34:31.938 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - ClassLoaderAccessImpl#injectTempClassLoader(null) [was org.springframework.instrument.classloading.SimpleThrowawayClassLoader@2ec99035]
+11:34:31.965 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+11:34:31.966 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+11:34:31.966 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+11:34:31.971 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+11:34:31.972 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+11:34:31.973 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+11:34:31.974 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+11:34:31.975 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+11:34:31.976 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+11:34:31.976 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+11:34:31.984 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+11:34:31.984 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+11:34:31.984 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+11:34:31.987 [main] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+11:34:32.003 [main] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator - Database ->
+       name : H2
+    version : 1.4.199 (2019-03-13)
+      major : 1
+      minor : 4
+11:34:32.004 [main] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator - Driver ->
+       name : H2 JDBC Driver
+    version : 1.4.199 (2019-03-13)
+      major : 1
+      minor : 4
+11:34:32.007 [main] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator - JDBC version : 4.1
+11:34:32.033 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+11:34:32.166 [main] DEBUG o.h.e.j.e.s.IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
+11:34:32.202 [main] DEBUG o.h.boot.model.relational.Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+11:34:32.212 [main] DEBUG o.h.type.spi.TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@4e375bba] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@ab2e6d2]
+11:34:32.329 [main] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.example.demo.model.persistence.Cart
+11:34:32.376 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+11:34:32.387 [main] DEBUG o.h.cfg.annotations.EntityBinder - Import with entity name Cart
+11:34:32.390 [main] DEBUG o.h.cfg.annotations.EntityBinder - Bind entity com.example.demo.model.persistence.Cart on table cart
+11:34:32.453 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(cart), mappingColumn=id, insertable=true, updatable=true, unique=false}
+11:34:32.469 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+11:34:32.481 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.example.demo.model.persistence.Cart:id]
+11:34:32.483 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for id
+11:34:32.488 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property id
+11:34:32.496 [main] DEBUG org.hibernate.cfg.BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, identity, , ...)
+11:34:32.499 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(cart), mappingColumn=items, insertable=true, updatable=true, unique=false}
+11:34:32.509 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(cart), mappingColumn=null, insertable=true, updatable=true, unique=false}
+11:34:32.539 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(cart), mappingColumn=element, insertable=true, updatable=true, unique=false}
+11:34:32.540 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(cart), mappingColumn=items_key, insertable=true, updatable=true, unique=false}
+11:34:32.542 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='items_KEY', referencedColumn='null', mappedBy='null'}
+11:34:32.543 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+11:34:32.547 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+11:34:32.548 [main] DEBUG o.h.cfg.annotations.CollectionBinder - Collection role: com.example.demo.model.persistence.Cart.items
+11:34:32.554 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property items
+11:34:32.554 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(cart), mappingColumn=total, insertable=true, updatable=true, unique=false}
+11:34:32.559 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property total with lazy=false
+11:34:32.563 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.example.demo.model.persistence.Cart:total]
+11:34:32.563 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for total
+11:34:32.564 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property total
+11:34:32.564 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='cart'}
+11:34:32.564 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(cart), mappingColumn=user, insertable=true, updatable=true, unique=false}
+11:34:32.567 [main] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.example.demo.model.persistence.Item
+11:34:32.567 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+11:34:32.568 [main] DEBUG o.h.cfg.annotations.EntityBinder - Import with entity name Item
+11:34:32.568 [main] DEBUG o.h.cfg.annotations.EntityBinder - Bind entity com.example.demo.model.persistence.Item on table item
+11:34:32.576 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(item), mappingColumn=id, insertable=true, updatable=true, unique=false}
+11:34:32.576 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+11:34:32.576 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.example.demo.model.persistence.Item:id]
+11:34:32.576 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for id
+11:34:32.577 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property id
+11:34:32.577 [main] DEBUG org.hibernate.cfg.BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, identity, , ...)
+11:34:32.577 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(item), mappingColumn=description, insertable=true, updatable=true, unique=false}
+11:34:32.584 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property description with lazy=false
+11:34:32.584 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.example.demo.model.persistence.Item:description]
+11:34:32.584 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for description
+11:34:32.587 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property description
+11:34:32.587 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(item), mappingColumn=name, insertable=true, updatable=true, unique=false}
+11:34:32.588 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property name with lazy=false
+11:34:32.588 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.example.demo.model.persistence.Item:name]
+11:34:32.588 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for name
+11:34:32.594 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property name
+11:34:32.595 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(item), mappingColumn=price, insertable=true, updatable=true, unique=false}
+11:34:32.595 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property price with lazy=false
+11:34:32.596 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.example.demo.model.persistence.Item:price]
+11:34:32.598 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for price
+11:34:32.598 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property price
+11:34:32.599 [main] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.example.demo.model.persistence.User
+11:34:32.599 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+11:34:32.600 [main] DEBUG o.h.cfg.annotations.EntityBinder - Import with entity name User
+11:34:32.600 [main] DEBUG o.h.cfg.annotations.EntityBinder - Bind entity com.example.demo.model.persistence.User on table user
+11:34:32.607 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=id, insertable=true, updatable=true, unique=false}
+11:34:32.619 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+11:34:32.619 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.example.demo.model.persistence.User:id]
+11:34:32.620 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for id
+11:34:32.621 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property id
+11:34:32.621 [main] DEBUG org.hibernate.cfg.BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, identity, , ...)
+11:34:32.622 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='cart_id', referencedColumn='id', mappedBy=''}
+11:34:32.622 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=cart, insertable=true, updatable=true, unique=false}
+11:34:32.623 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property cart
+11:34:32.627 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=password, insertable=true, updatable=true, unique=false}
+11:34:32.628 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property password with lazy=false
+11:34:32.628 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.example.demo.model.persistence.User:password]
+11:34:32.628 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for password
+11:34:32.628 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property password
+11:34:32.629 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=username, insertable=true, updatable=true, unique=true}
+11:34:32.631 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property username with lazy=false
+11:34:32.632 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.example.demo.model.persistence.User:username]
+11:34:32.632 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for username
+11:34:32.632 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property username
+11:34:32.632 [main] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.example.demo.model.persistence.UserOrder
+11:34:32.633 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+11:34:32.633 [main] DEBUG o.h.cfg.annotations.EntityBinder - Import with entity name UserOrder
+11:34:32.633 [main] DEBUG o.h.cfg.annotations.EntityBinder - Bind entity com.example.demo.model.persistence.UserOrder on table user_order
+11:34:32.644 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user_order), mappingColumn=id, insertable=true, updatable=true, unique=false}
+11:34:32.644 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+11:34:32.644 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.example.demo.model.persistence.UserOrder:id]
+11:34:32.645 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for id
+11:34:32.645 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property id
+11:34:32.645 [main] DEBUG org.hibernate.cfg.BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, identity, , ...)
+11:34:32.645 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user_order), mappingColumn=items, insertable=true, updatable=true, unique=false}
+11:34:32.646 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user_order), mappingColumn=null, insertable=true, updatable=true, unique=false}
+11:34:32.646 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user_order), mappingColumn=element, insertable=true, updatable=true, unique=false}
+11:34:32.646 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user_order), mappingColumn=items_key, insertable=true, updatable=true, unique=false}
+11:34:32.646 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='items_KEY', referencedColumn='null', mappedBy='null'}
+11:34:32.647 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+11:34:32.649 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+11:34:32.650 [main] DEBUG o.h.cfg.annotations.CollectionBinder - Collection role: com.example.demo.model.persistence.UserOrder.items
+11:34:32.650 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property items
+11:34:32.651 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user_order), mappingColumn=total, insertable=true, updatable=true, unique=false}
+11:34:32.651 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property total with lazy=false
+11:34:32.651 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.example.demo.model.persistence.UserOrder:total]
+11:34:32.655 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for total
+11:34:32.656 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property total
+11:34:32.657 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='user_id', referencedColumn='id', mappedBy=''}
+11:34:32.657 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user_order), mappingColumn=user, insertable=true, updatable=true, unique=false}
+11:34:32.658 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property user
+11:34:32.659 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for id
+11:34:32.667 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for total
+11:34:32.667 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for id
+11:34:32.668 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for description
+11:34:32.668 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for name
+11:34:32.669 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for price
+11:34:32.669 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for id
+11:34:32.669 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for password
+11:34:32.669 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for username
+11:34:32.669 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for id
+11:34:32.669 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for total
+11:34:32.684 [main] DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [cart]
+11:34:32.684 [main] DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [item]
+11:34:32.684 [main] DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [user]
+11:34:32.684 [main] DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [user_order]
+11:34:32.684 [main] DEBUG o.hibernate.cfg.CollectionSecondPass - Second pass for collection: com.example.demo.model.persistence.UserOrder.items
+11:34:32.685 [main] DEBUG o.h.cfg.annotations.CollectionBinder - Binding as ManyToMany: com.example.demo.model.persistence.UserOrder.items
+11:34:32.710 [main] DEBUG o.hibernate.cfg.CollectionSecondPass - Mapped collection key: user_order_id, element: items_id
+11:34:32.710 [main] DEBUG o.hibernate.cfg.CollectionSecondPass - Second pass for collection: com.example.demo.model.persistence.Cart.items
+11:34:32.710 [main] DEBUG o.h.cfg.annotations.CollectionBinder - Binding as ManyToMany: com.example.demo.model.persistence.Cart.items
+11:34:32.710 [main] DEBUG o.hibernate.cfg.CollectionSecondPass - Mapped collection key: cart_id, element: items_id
+11:34:32.712 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property user
+11:34:32.713 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Processing association property references
+11:34:32.714 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: com.example.demo.model.persistence.Item
+11:34:32.722 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: com.example.demo.model.persistence.Cart
+11:34:32.722 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: com.example.demo.model.persistence.Cart
+11:34:32.722 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: com.example.demo.model.persistence.User
+11:34:32.722 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: com.example.demo.model.persistence.Item
+11:34:32.723 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: com.example.demo.model.persistence.UserOrder
+11:34:32.724 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Processing association property references
+11:34:32.724 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: com.example.demo.model.persistence.Item
+11:34:32.725 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: com.example.demo.model.persistence.Cart
+11:34:32.725 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: com.example.demo.model.persistence.Cart
+11:34:32.725 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: com.example.demo.model.persistence.User
+11:34:32.725 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: com.example.demo.model.persistence.Item
+11:34:32.725 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: com.example.demo.model.persistence.UserOrder
+11:34:32.788 [main] DEBUG o.h.internal.SessionFactoryImpl - Building session factory
+11:34:32.796 [main] DEBUG org.hibernate.cfg.Settings - SessionFactory name : null
+11:34:32.796 [main] DEBUG org.hibernate.cfg.Settings - Automatic flush during beforeCompletion(): enabled
+11:34:32.796 [main] DEBUG org.hibernate.cfg.Settings - Automatic session close at end of transaction: disabled
+11:34:32.796 [main] DEBUG org.hibernate.cfg.Settings - Statistics: disabled
+11:34:32.797 [main] DEBUG org.hibernate.cfg.Settings - Deleted entity synthetic identifier rollback: disabled
+11:34:32.797 [main] DEBUG org.hibernate.cfg.Settings - Default entity-mode: pojo
+11:34:32.797 [main] DEBUG org.hibernate.cfg.Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+11:34:32.797 [main] DEBUG org.hibernate.cfg.Settings - Allow initialization of lazy state outside session : disabled
+11:34:32.797 [main] DEBUG org.hibernate.cfg.Settings - Using BatchFetchStyle : LEGACY
+11:34:32.797 [main] DEBUG org.hibernate.cfg.Settings - Default batch fetch size: -1
+11:34:32.797 [main] DEBUG org.hibernate.cfg.Settings - Maximum outer join fetch depth: null
+11:34:32.798 [main] DEBUG org.hibernate.cfg.Settings - Default null ordering: NONE
+11:34:32.798 [main] DEBUG org.hibernate.cfg.Settings - Order SQL updates by primary key: disabled
+11:34:32.798 [main] DEBUG org.hibernate.cfg.Settings - Order SQL inserts for batching: disabled
+11:34:32.798 [main] DEBUG org.hibernate.cfg.Settings - multi-tenancy strategy : NONE
+11:34:32.798 [main] DEBUG org.hibernate.cfg.Settings - JTA Track by Thread: enabled
+11:34:32.798 [main] DEBUG org.hibernate.cfg.Settings - Query language substitutions: {}
+11:34:32.798 [main] DEBUG org.hibernate.cfg.Settings - Named query checking : enabled
+11:34:32.798 [main] DEBUG org.hibernate.cfg.Settings - Second-level cache: disabled
+11:34:32.799 [main] DEBUG org.hibernate.cfg.Settings - Second-level query cache: disabled
+11:34:32.799 [main] DEBUG org.hibernate.cfg.Settings - Second-level query cache factory: null
+11:34:32.799 [main] DEBUG org.hibernate.cfg.Settings - Second-level cache region prefix: null
+11:34:32.802 [main] DEBUG org.hibernate.cfg.Settings - Optimize second-level cache for minimal puts: disabled
+11:34:32.802 [main] DEBUG org.hibernate.cfg.Settings - Structured second-level cache entries: disabled
+11:34:32.802 [main] DEBUG org.hibernate.cfg.Settings - Second-level cache direct-reference entries: disabled
+11:34:32.803 [main] DEBUG org.hibernate.cfg.Settings - Automatic eviction of collection cache: disabled
+11:34:32.803 [main] DEBUG org.hibernate.cfg.Settings - JDBC batch size: 15
+11:34:32.803 [main] DEBUG org.hibernate.cfg.Settings - JDBC batch updates for versioned data: enabled
+11:34:32.803 [main] DEBUG org.hibernate.cfg.Settings - Scrollable result sets: enabled
+11:34:32.803 [main] DEBUG org.hibernate.cfg.Settings - Wrap result sets: disabled
+11:34:32.803 [main] DEBUG org.hibernate.cfg.Settings - JDBC3 getGeneratedKeys(): enabled
+11:34:32.803 [main] DEBUG org.hibernate.cfg.Settings - JDBC result set fetch size: null
+11:34:32.803 [main] DEBUG org.hibernate.cfg.Settings - Connection release mode: ON_CLOSE
+11:34:32.804 [main] DEBUG org.hibernate.cfg.Settings - Generate SQL with comments: disabled
+11:34:32.804 [main] DEBUG org.hibernate.cfg.Settings - JPA compliance - query : 
+11:34:32.807 [main] DEBUG org.hibernate.cfg.Settings - JPA compliance - closed-handling : 
+11:34:32.807 [main] DEBUG org.hibernate.cfg.Settings - JPA compliance - lists : 
+11:34:32.807 [main] DEBUG org.hibernate.cfg.Settings - JPA compliance - transactions : 
+11:34:32.926 [main] DEBUG o.h.internal.SessionFactoryImpl - Session factory constructed with filter configurations : {}
+11:34:32.927 [main] DEBUG o.h.internal.SessionFactoryImpl - Instantiating session factory with properties: {awt.toolkit=sun.awt.X11.XToolkit, hibernate.id.new_generator_mappings=true, file.encoding.pkg=sun.io, java.specification.version=1.8, sun.cpu.isalist=, hibernate.resource.beans.container=org.springframework.orm.hibernate5.SpringBeanContainer@28768e25, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, sun.jnu.encoding=UTF-8, hibernate.dialect=org.hibernate.dialect.H2Dialect, hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy, java.class.path=/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/test-classes:/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes:/root/.m2/repository/org/springframework/boot/spring-boot-starter-security/2.1.5.RELEASE/spring-boot-starter-security-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter/2.1.5.RELEASE/spring-boot-starter-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot/2.1.5.RELEASE/spring-boot-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.1.5.RELEASE/spring-boot-autoconfigure-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.1.5.RELEASE/spring-boot-starter-logging-2.1.5.RELEASE.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.11.2/log4j-to-slf4j-2.11.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.11.2/log4j-api-2.11.2.jar:/root/.m2/repository/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26.jar:/root/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar:/root/.m2/repository/org/springframework/spring-aop/5.1.7.RELEASE/spring-aop-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/spring-beans/5.1.7.RELEASE/spring-beans-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/security/spring-security-config/5.1.5.RELEASE/spring-security-config-5.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/spring-context/5.1.7.RELEASE/spring-context-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/security/spring-security-web/5.1.5.RELEASE/spring-security-web-5.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/spring-expression/5.1.7.RELEASE/spring-expression-5.1.7.RELEASE.jar:/root/.m2/repository/com/auth0/java-jwt/3.10.2/java-jwt-3.10.2.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar:/root/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/root/.m2/repository/org/springframework/security/spring-security-test/5.1.5.RELEASE/spring-security-test-5.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/spring-core/5.1.7.RELEASE/spring-core-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/spring-jcl/5.1.7.RELEASE/spring-jcl-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/spring-test/5.1.7.RELEASE/spring-test-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.1.5.RELEASE/spring-boot-starter-data-jpa-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.1.5.RELEASE/spring-boot-starter-aop-2.1.5.RELEASE.jar:/root/.m2/repository/org/aspectj/aspectjweaver/1.9.4/aspectjweaver-1.9.4.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.1.5.RELEASE/spring-boot-starter-jdbc-2.1.5.RELEASE.jar:/root/.m2/repository/com/zaxxer/HikariCP/3.2.0/HikariCP-3.2.0.jar:/root/.m2/repository/org/springframework/spring-jdbc/5.1.7.RELEASE/spring-jdbc-5.1.7.RELEASE.jar:/root/.m2/repository/javax/transaction/javax.transaction-api/1.3/javax.transaction-api-1.3.jar:/root/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/root/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/root/.m2/repository/org/hibernate/hibernate-core/5.3.10.Final/hibernate-core-5.3.10.Final.jar:/root/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/root/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar:/root/.m2/repository/org/javassist/javassist/3.23.2-GA/javassist-3.23.2-GA.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.9.12/byte-buddy-1.9.12.jar:/root/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/root/.m2/repository/org/jboss/jandex/2.0.5.Final/jandex-2.0.5.Final.jar:/root/.m2/repository/com/fasterxml/classmate/1.4.0/classmate-1.4.0.jar:/root/.m2/repository/org/dom4j/dom4j/2.1.1/dom4j-2.1.1.jar:/root/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.0.4.Final/hibernate-commons-annotations-5.0.4.Final.jar:/root/.m2/repository/org/springframework/data/spring-data-jpa/2.1.8.RELEASE/spring-data-jpa-2.1.8.RELEASE.jar:/root/.m2/repository/org/springframework/data/spring-data-commons/2.1.8.RELEASE/spring-data-commons-2.1.8.RELEASE.jar:/root/.m2/repository/org/springframework/spring-orm/5.1.7.RELEASE/spring-orm-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/spring-tx/5.1.7.RELEASE/spring-tx-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/spring-aspects/5.1.7.RELEASE/spring-aspects-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.1.5.RELEASE/spring-boot-starter-web-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.1.5.RELEASE/spring-boot-starter-json-2.1.5.RELEASE.jar:/root/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.8/jackson-datatype-jdk8-2.9.8.jar:/root/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.8/jackson-datatype-jsr310-2.9.8.jar:/root/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.8/jackson-module-parameter-names-2.9.8.jar:/root/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.16.Final/hibernate-validator-6.0.16.Final.jar:/root/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar:/root/.m2/repository/org/springframework/spring-web/5.1.7.RELEASE/spring-web-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.1.5.RELEASE/spring-boot-starter-tomcat-2.1.5.RELEASE.jar:/root/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/root/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.19/tomcat-embed-core-9.0.19.jar:/root/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.19/tomcat-embed-el-9.0.19.jar:/root/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.19/tomcat-embed-websocket-9.0.19.jar:/root/.m2/repository/com/h2database/h2/1.4.199/h2-1.4.199.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.1.5.RELEASE/spring-boot-starter-test-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-test/2.1.5.RELEASE/spring-boot-test-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.1.5.RELEASE/spring-boot-test-autoconfigure-2.1.5.RELEASE.jar:/root/.m2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar:/root/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/root/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/root/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/root/.m2/repository/org/assertj/assertj-core/3.11.1/assertj-core-3.11.1.jar:/root/.m2/repository/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.jar:/root/.m2/repository/net/bytebuddy/byte-buddy-agent/1.9.12/byte-buddy-agent-1.9.12.jar:/root/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar:/root/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar:/root/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/root/.m2/repository/org/xmlunit/xmlunit-core/2.6.2/xmlunit-core-2.6.2.jar:/root/.m2/repository/junit/junit/4.13/junit-4.13.jar:/root/.m2/repository/org/slf4j/slf4j-log4j12/1.7.30/slf4j-log4j12-1.7.30.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar:/root/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:, java.vm.vendor=AdoptOpenJDK, sun.arch.data.model=64, java.vendor.url=https://adoptopenjdk.net/, user.timezone=GMT, os.name=Linux, java.vm.specification.version=1.8, javax.persistence.validation.mode=AUTO, sun.java.launcher=SUN_STANDARD, user.country=US, sun.boot.library.path=/opt/java/openjdk/jre/lib/amd64, sun.java.command=/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/surefire/surefirebooter1577794229673172917.jar /var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/surefire 2021-04-22T11-34-22_037-jvmRun1 surefire8462130679089044159tmp surefire_02249388961169052959tmp, hibernate.transaction.jta.platform=org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform@310d57b1, javax.persistence.sharedCache.mode=UNSPECIFIED, surefire.test.class.path=/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/test-classes:/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes:/root/.m2/repository/org/springframework/boot/spring-boot-starter-security/2.1.5.RELEASE/spring-boot-starter-security-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter/2.1.5.RELEASE/spring-boot-starter-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot/2.1.5.RELEASE/spring-boot-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.1.5.RELEASE/spring-boot-autoconfigure-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.1.5.RELEASE/spring-boot-starter-logging-2.1.5.RELEASE.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.11.2/log4j-to-slf4j-2.11.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.11.2/log4j-api-2.11.2.jar:/root/.m2/repository/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26.jar:/root/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar:/root/.m2/repository/org/springframework/spring-aop/5.1.7.RELEASE/spring-aop-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/spring-beans/5.1.7.RELEASE/spring-beans-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/security/spring-security-config/5.1.5.RELEASE/spring-security-config-5.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/spring-context/5.1.7.RELEASE/spring-context-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/security/spring-security-web/5.1.5.RELEASE/spring-security-web-5.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/spring-expression/5.1.7.RELEASE/spring-expression-5.1.7.RELEASE.jar:/root/.m2/repository/com/auth0/java-jwt/3.10.2/java-jwt-3.10.2.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar:/root/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/root/.m2/repository/org/springframework/security/spring-security-test/5.1.5.RELEASE/spring-security-test-5.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/spring-core/5.1.7.RELEASE/spring-core-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/spring-jcl/5.1.7.RELEASE/spring-jcl-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/spring-test/5.1.7.RELEASE/spring-test-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.1.5.RELEASE/spring-boot-starter-data-jpa-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.1.5.RELEASE/spring-boot-starter-aop-2.1.5.RELEASE.jar:/root/.m2/repository/org/aspectj/aspectjweaver/1.9.4/aspectjweaver-1.9.4.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.1.5.RELEASE/spring-boot-starter-jdbc-2.1.5.RELEASE.jar:/root/.m2/repository/com/zaxxer/HikariCP/3.2.0/HikariCP-3.2.0.jar:/root/.m2/repository/org/springframework/spring-jdbc/5.1.7.RELEASE/spring-jdbc-5.1.7.RELEASE.jar:/root/.m2/repository/javax/transaction/javax.transaction-api/1.3/javax.transaction-api-1.3.jar:/root/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/root/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/root/.m2/repository/org/hibernate/hibernate-core/5.3.10.Final/hibernate-core-5.3.10.Final.jar:/root/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/root/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar:/root/.m2/repository/org/javassist/javassist/3.23.2-GA/javassist-3.23.2-GA.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.9.12/byte-buddy-1.9.12.jar:/root/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/root/.m2/repository/org/jboss/jandex/2.0.5.Final/jandex-2.0.5.Final.jar:/root/.m2/repository/com/fasterxml/classmate/1.4.0/classmate-1.4.0.jar:/root/.m2/repository/org/dom4j/dom4j/2.1.1/dom4j-2.1.1.jar:/root/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.0.4.Final/hibernate-commons-annotations-5.0.4.Final.jar:/root/.m2/repository/org/springframework/data/spring-data-jpa/2.1.8.RELEASE/spring-data-jpa-2.1.8.RELEASE.jar:/root/.m2/repository/org/springframework/data/spring-data-commons/2.1.8.RELEASE/spring-data-commons-2.1.8.RELEASE.jar:/root/.m2/repository/org/springframework/spring-orm/5.1.7.RELEASE/spring-orm-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/spring-tx/5.1.7.RELEASE/spring-tx-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/spring-aspects/5.1.7.RELEASE/spring-aspects-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.1.5.RELEASE/spring-boot-starter-web-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.1.5.RELEASE/spring-boot-starter-json-2.1.5.RELEASE.jar:/root/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.8/jackson-datatype-jdk8-2.9.8.jar:/root/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.8/jackson-datatype-jsr310-2.9.8.jar:/root/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.8/jackson-module-parameter-names-2.9.8.jar:/root/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.16.Final/hibernate-validator-6.0.16.Final.jar:/root/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar:/root/.m2/repository/org/springframework/spring-web/5.1.7.RELEASE/spring-web-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.1.5.RELEASE/spring-boot-starter-tomcat-2.1.5.RELEASE.jar:/root/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/root/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.19/tomcat-embed-core-9.0.19.jar:/root/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.19/tomcat-embed-el-9.0.19.jar:/root/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.19/tomcat-embed-websocket-9.0.19.jar:/root/.m2/repository/com/h2database/h2/1.4.199/h2-1.4.199.jar:/root/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.1.5.RELEASE/spring-boot-starter-test-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-test/2.1.5.RELEASE/spring-boot-test-2.1.5.RELEASE.jar:/root/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.1.5.RELEASE/spring-boot-test-autoconfigure-2.1.5.RELEASE.jar:/root/.m2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar:/root/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/root/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/root/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/root/.m2/repository/org/assertj/assertj-core/3.11.1/assertj-core-3.11.1.jar:/root/.m2/repository/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.jar:/root/.m2/repository/net/bytebuddy/byte-buddy-agent/1.9.12/byte-buddy-agent-1.9.12.jar:/root/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar:/root/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar:/root/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/root/.m2/repository/org/xmlunit/xmlunit-core/2.6.2/xmlunit-core-2.6.2.jar:/root/.m2/repository/junit/junit/4.13/junit-4.13.jar:/root/.m2/repository/org/slf4j/slf4j-log4j12/1.7.30/slf4j-log4j12-1.7.30.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar:/root/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:, sun.cpu.endian=little, user.home=/root, user.language=en, java.specification.vendor=Oracle Corporation, java.home=/opt/java/openjdk/jre, file.separator=/, basedir=/var/jenkins_home/workspace/mySecondJob/ECommerceApp, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, java.awt.headless=true, surefire.real.class.path=/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/surefire/surefirebooter1577794229673172917.jar, sun.boot.class.path=/opt/java/openjdk/jre/lib/resources.jar:/opt/java/openjdk/jre/lib/rt.jar:/opt/java/openjdk/jre/lib/sunrsasign.jar:/opt/java/openjdk/jre/lib/jsse.jar:/opt/java/openjdk/jre/lib/jce.jar:/opt/java/openjdk/jre/lib/charsets.jar:/opt/java/openjdk/jre/lib/jfr.jar:/opt/java/openjdk/jre/classes, hibernate.hbm2ddl.auto=update, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=1.8.0_282-b08, user.name=root, path.separator=:, os.version=4.14.225-169.362.amzn2.x86_64, java.endorsed.dirs=/opt/java/openjdk/jre/lib/endorsed, java.runtime.name=OpenJDK Runtime Environment, hibernate.ejb.persistenceUnitName=default, file.encoding=UTF-8, spring.beaninfo.ignore=true, java.vm.name=OpenJDK 64-Bit Server VM, localRepository=/root/.m2/repository, java.vendor.url.bug=https://github.com/AdoptOpenJDK/openjdk-support/issues, java.io.tmpdir=/tmp, com.zaxxer.hikari.pool_number=1, java.version=1.8.0_282, hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy, user.dir=/var/jenkins_home/workspace/mySecondJob/ECommerceApp, os.arch=amd64, PID=2748, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.print.PSPrinterJob, sun.os.patch.level=unknown, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@143fefaf, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vendor=AdoptOpenJDK, java.vm.info=mixed mode, java.vm.version=25.282-b08, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.datasource=HikariDataSource (HikariPool-1), sun.io.unicode.encoding=UnicodeLittle, java.ext.dirs=/opt/java/openjdk/jre/lib/ext:/usr/java/packages/lib/ext, java.class.version=52.0}
+11:34:32.954 [main] DEBUG o.h.v.i.e.r.TraversableResolvers - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+11:34:32.955 [main] DEBUG o.h.v.i.e.r.TraversableResolvers - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+11:34:32.955 [main] DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+11:34:32.956 [main] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+11:34:32.956 [main] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+11:34:32.957 [main] DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+11:34:32.973 [main] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+11:34:32.973 [main] DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+11:34:32.973 [main] DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+11:34:32.974 [main] DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+11:34:32.974 [main] DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+11:34:32.974 [main] DEBUG o.h.v.i.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+11:34:32.975 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.example.demo.model.persistence.Cart] is safe
+11:34:32.975 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.demo.model.persistence.Cart
+11:34:33.072 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.example.demo.model.persistence.UserOrder] is safe
+11:34:33.072 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.demo.model.persistence.UserOrder
+11:34:33.080 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.example.demo.model.persistence.User] is safe
+11:34:33.080 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.demo.model.persistence.User
+11:34:33.093 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.example.demo.model.persistence.Item] is safe
+11:34:33.095 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.demo.model.persistence.Item
+11:34:33.128 [main] DEBUG o.h.secure.spi.JaccIntegrator - Skipping JACC integration as it was not enabled
+11:34:33.129 [main] DEBUG o.h.internal.SessionFactoryImpl - Instantiated session factory
+11:34:33.129 [main] DEBUG o.h.type.spi.TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@4e375bba] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@245cb8df]
+11:34:33.206 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.example.demo.model.persistence.Cart] is safe
+11:34:33.206 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.demo.model.persistence.Cart
+11:34:33.226 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.example.demo.model.persistence.Cart] is safe
+11:34:33.226 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.demo.model.persistence.Cart
+11:34:33.282 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.example.demo.model.persistence.UserOrder] is safe
+11:34:33.283 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.demo.model.persistence.UserOrder
+11:34:33.283 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.example.demo.model.persistence.UserOrder] is safe
+11:34:33.283 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.demo.model.persistence.UserOrder
+11:34:33.314 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.example.demo.model.persistence.User] is safe
+11:34:33.315 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.demo.model.persistence.User
+11:34:33.316 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.example.demo.model.persistence.User] is safe
+11:34:33.316 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.demo.model.persistence.User
+11:34:33.342 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.example.demo.model.persistence.Item] is safe
+11:34:33.343 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.demo.model.persistence.Item
+11:34:33.343 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - Not known whether passed class name [com.example.demo.model.persistence.Item] is safe
+11:34:33.345 [main] DEBUG o.h.b.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.demo.model.persistence.Item
+11:34:33.390 [main] DEBUG o.h.p.c.AbstractCollectionPersister - Static SQL for collection: com.example.demo.model.persistence.Cart.items
+11:34:33.390 [main] DEBUG o.h.p.c.AbstractCollectionPersister -  Row insert: insert into cart_items (cart_id, items_id) values (?, ?)
+11:34:33.390 [main] DEBUG o.h.p.c.AbstractCollectionPersister -  Row update: update cart_items set items_id=? where cart_id=? and items_id=?
+11:34:33.391 [main] DEBUG o.h.p.c.AbstractCollectionPersister -  Row delete: delete from cart_items where cart_id=? and items_id=?
+11:34:33.391 [main] DEBUG o.h.p.c.AbstractCollectionPersister -  One-shot delete: delete from cart_items where cart_id=?
+11:34:33.391 [main] DEBUG o.h.p.c.AbstractCollectionPersister - Static SQL for collection: com.example.demo.model.persistence.UserOrder.items
+11:34:33.395 [main] DEBUG o.h.p.c.AbstractCollectionPersister -  Row insert: insert into user_order_items (user_order_id, items_id) values (?, ?)
+11:34:33.395 [main] DEBUG o.h.p.c.AbstractCollectionPersister -  Row update: update user_order_items set items_id=? where user_order_id=? and items_id=?
+11:34:33.396 [main] DEBUG o.h.p.c.AbstractCollectionPersister -  Row delete: delete from user_order_items where user_order_id=? and items_id=?
+11:34:33.396 [main] DEBUG o.h.p.c.AbstractCollectionPersister -  One-shot delete: delete from user_order_items where user_order_id=?
+11:34:33.405 [main] DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: com.example.demo.model.persistence.Cart
+11:34:33.405 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Version select: select id from cart where id =?
+11:34:33.405 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Snapshot select: select cart_.id, cart_.total as total2_0_ from cart cart_ where cart_.id=?
+11:34:33.405 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Insert 0: insert into cart (total, id) values (?, ?)
+11:34:33.405 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Update 0: update cart set total=? where id=?
+11:34:33.405 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Delete 0: delete from cart where id=?
+11:34:33.406 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Identity insert: insert into cart (id, total) values (null, ?)
+11:34:33.458 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@9281d19]
+11:34:33.459 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : items
+11:34:33.466 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@2e45a357]
+11:34:33.473 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@677cb96e]
+11:34:33.473 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : total
+11:34:33.474 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user
+11:34:33.474 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@53cb0bcb]
+11:34:33.475 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.cart
+11:34:33.476 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Property path deemed to be circular : user.cart
+11:34:33.476 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.password
+11:34:33.483 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.username
+11:34:33.483 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+11:34:33.504 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+11:34:33.517 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.example.demo.model.persistence.Cart)
+    - Returns
+       - EntityReturnImpl(entity=com.example.demo.model.persistence.Cart, querySpaceUid=<gen:0>, path=com.example.demo.model.persistence.Cart)
+          - CollectionAttributeFetchImpl(collection=com.example.demo.model.persistence.Cart.items, querySpaceUid=<gen:1>, path=com.example.demo.model.persistence.Cart.items)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.example.demo.model.persistence.Item, querySpaceUid=<gen:2>, path=com.example.demo.model.persistence.Cart.items.<elements>)
+          - EntityAttributeFetchImpl(entity=com.example.demo.model.persistence.User, querySpaceUid=<gen:3>, path=com.example.demo.model.persistence.Cart.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.demo.model.persistence.Cart)
+          - SQL table alias mapping - cart0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:3>
+             - EntityQuerySpaceImpl(uid=<gen:3>, entity=com.example.demo.model.persistence.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_3_1_}
+
+11:34:33.519 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.example.demo.model.persistence.Cart [NONE]: select cart0_.id as id1_0_0_, cart0_.total as total2_0_0_, user1_.id as id1_3_1_, user1_.cart_id as cart_id4_3_1_, user1_.password as password2_3_1_, user1_.username as username3_3_1_ from cart cart0_ left outer join user user1_ on cart0_.id=user1_.cart_id where cart0_.id=?
+11:34:33.519 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@59262a90]
+11:34:33.520 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : items
+11:34:33.520 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@2755617b]
+11:34:33.520 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@65859b44]
+11:34:33.521 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : total
+11:34:33.521 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user
+11:34:33.521 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@d9f5fce]
+11:34:33.527 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.cart
+11:34:33.527 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Property path deemed to be circular : user.cart
+11:34:33.527 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.password
+11:34:33.528 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.username
+11:34:33.528 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+11:34:33.528 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+11:34:33.529 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.example.demo.model.persistence.Cart)
+    - Returns
+       - EntityReturnImpl(entity=com.example.demo.model.persistence.Cart, querySpaceUid=<gen:0>, path=com.example.demo.model.persistence.Cart)
+          - CollectionAttributeFetchImpl(collection=com.example.demo.model.persistence.Cart.items, querySpaceUid=<gen:1>, path=com.example.demo.model.persistence.Cart.items)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.example.demo.model.persistence.Item, querySpaceUid=<gen:2>, path=com.example.demo.model.persistence.Cart.items.<elements>)
+          - EntityAttributeFetchImpl(entity=com.example.demo.model.persistence.User, querySpaceUid=<gen:3>, path=com.example.demo.model.persistence.Cart.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.demo.model.persistence.Cart)
+          - SQL table alias mapping - cart0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:3>
+             - EntityQuerySpaceImpl(uid=<gen:3>, entity=com.example.demo.model.persistence.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_3_1_}
+
+11:34:33.530 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.example.demo.model.persistence.Cart [READ]: select cart0_.id as id1_0_0_, cart0_.total as total2_0_0_, user1_.id as id1_3_1_, user1_.cart_id as cart_id4_3_1_, user1_.password as password2_3_1_, user1_.username as username3_3_1_ from cart cart0_ left outer join user user1_ on cart0_.id=user1_.cart_id where cart0_.id=?
+11:34:33.550 [main] DEBUG org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity com.example.demo.model.persistence.Cart: select cart0_.id as id1_0_0_, cart0_.total as total2_0_0_ from cart cart0_ where cart0_.id=?
+11:34:33.550 [main] DEBUG org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity com.example.demo.model.persistence.Cart: select cart0_.id as id1_0_0_, cart0_.total as total2_0_0_ from cart cart0_ where cart0_.id=?
+11:34:33.551 [main] DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: com.example.demo.model.persistence.UserOrder
+11:34:33.551 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Version select: select id from user_order where id =?
+11:34:33.551 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Snapshot select: select userorder_.id, userorder_.total as total2_4_, userorder_.user_id as user_id3_4_ from user_order userorder_ where userorder_.id=?
+11:34:33.551 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Insert 0: insert into user_order (total, user_id, id) values (?, ?, ?)
+11:34:33.551 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Update 0: update user_order set total=?, user_id=? where id=?
+11:34:33.552 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Delete 0: delete from user_order where id=?
+11:34:33.555 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Identity insert: insert into user_order (id, total, user_id) values (null, ?, ?)
+11:34:33.555 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@675ec28b]
+11:34:33.556 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : items
+11:34:33.556 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@610fbe1c]
+11:34:33.556 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@46d0f89c]
+11:34:33.556 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : total
+11:34:33.556 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user
+11:34:33.556 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@570b2057]
+11:34:33.556 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.cart
+11:34:33.557 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@16a6dc21]
+11:34:33.557 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.cart.items
+11:34:33.557 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@59f45950]
+11:34:33.557 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7871d261]
+11:34:33.557 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.cart.total
+11:34:33.557 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.cart.user
+11:34:33.557 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Property path deemed to be circular : user.cart.user
+11:34:33.558 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.password
+11:34:33.558 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.username
+11:34:33.558 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+11:34:33.558 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+11:34:33.559 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.example.demo.model.persistence.UserOrder)
+    - Returns
+       - EntityReturnImpl(entity=com.example.demo.model.persistence.UserOrder, querySpaceUid=<gen:0>, path=com.example.demo.model.persistence.UserOrder)
+          - CollectionAttributeFetchImpl(collection=com.example.demo.model.persistence.UserOrder.items, querySpaceUid=<gen:1>, path=com.example.demo.model.persistence.UserOrder.items)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.example.demo.model.persistence.Item, querySpaceUid=<gen:2>, path=com.example.demo.model.persistence.UserOrder.items.<elements>)
+          - EntityAttributeFetchImpl(entity=com.example.demo.model.persistence.User, querySpaceUid=<gen:3>, path=com.example.demo.model.persistence.UserOrder.user)
+             - EntityAttributeFetchImpl(entity=com.example.demo.model.persistence.Cart, querySpaceUid=<gen:4>, path=com.example.demo.model.persistence.UserOrder.user.cart)
+                - CollectionAttributeFetchImpl(collection=com.example.demo.model.persistence.Cart.items, querySpaceUid=<gen:5>, path=com.example.demo.model.persistence.UserOrder.user.cart.items)
+                   - (collection element) CollectionFetchableElementEntityGraph(entity=com.example.demo.model.persistence.Item, querySpaceUid=<gen:6>, path=com.example.demo.model.persistence.UserOrder.user.cart.items.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.demo.model.persistence.UserOrder)
+          - SQL table alias mapping - userorder0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_4_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:3>
+             - EntityQuerySpaceImpl(uid=<gen:3>, entity=com.example.demo.model.persistence.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_3_1_}
+                - JOIN (JoinDefinedByMetadata(cart)) : <gen:3> -> <gen:4>
+                   - EntityQuerySpaceImpl(uid=<gen:4>, entity=com.example.demo.model.persistence.Cart)
+                      - SQL table alias mapping - cart2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+
+11:34:33.563 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.example.demo.model.persistence.UserOrder [NONE]: select userorder0_.id as id1_4_0_, userorder0_.total as total2_4_0_, userorder0_.user_id as user_id3_4_0_, user1_.id as id1_3_1_, user1_.cart_id as cart_id4_3_1_, user1_.password as password2_3_1_, user1_.username as username3_3_1_, cart2_.id as id1_0_2_, cart2_.total as total2_0_2_ from user_order userorder0_ inner join user user1_ on userorder0_.user_id=user1_.id left outer join cart cart2_ on user1_.cart_id=cart2_.id where userorder0_.id=?
+11:34:33.563 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@58164e9a]
+11:34:33.564 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : items
+11:34:33.564 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@6a7a1a0d]
+11:34:33.564 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1c6e3ff9]
+11:34:33.564 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : total
+11:34:33.564 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user
+11:34:33.565 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@76e6c070]
+11:34:33.565 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.cart
+11:34:33.566 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@22da200e]
+11:34:33.567 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.cart.items
+11:34:33.567 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@f03ee8f]
+11:34:33.567 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@40dd552c]
+11:34:33.567 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.cart.total
+11:34:33.567 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.cart.user
+11:34:33.567 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Property path deemed to be circular : user.cart.user
+11:34:33.567 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.password
+11:34:33.567 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : user.username
+11:34:33.568 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+11:34:33.568 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+11:34:33.576 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.example.demo.model.persistence.UserOrder)
+    - Returns
+       - EntityReturnImpl(entity=com.example.demo.model.persistence.UserOrder, querySpaceUid=<gen:0>, path=com.example.demo.model.persistence.UserOrder)
+          - CollectionAttributeFetchImpl(collection=com.example.demo.model.persistence.UserOrder.items, querySpaceUid=<gen:1>, path=com.example.demo.model.persistence.UserOrder.items)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.example.demo.model.persistence.Item, querySpaceUid=<gen:2>, path=com.example.demo.model.persistence.UserOrder.items.<elements>)
+          - EntityAttributeFetchImpl(entity=com.example.demo.model.persistence.User, querySpaceUid=<gen:3>, path=com.example.demo.model.persistence.UserOrder.user)
+             - EntityAttributeFetchImpl(entity=com.example.demo.model.persistence.Cart, querySpaceUid=<gen:4>, path=com.example.demo.model.persistence.UserOrder.user.cart)
+                - CollectionAttributeFetchImpl(collection=com.example.demo.model.persistence.Cart.items, querySpaceUid=<gen:5>, path=com.example.demo.model.persistence.UserOrder.user.cart.items)
+                   - (collection element) CollectionFetchableElementEntityGraph(entity=com.example.demo.model.persistence.Item, querySpaceUid=<gen:6>, path=com.example.demo.model.persistence.UserOrder.user.cart.items.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.demo.model.persistence.UserOrder)
+          - SQL table alias mapping - userorder0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_4_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:3>
+             - EntityQuerySpaceImpl(uid=<gen:3>, entity=com.example.demo.model.persistence.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_3_1_}
+                - JOIN (JoinDefinedByMetadata(cart)) : <gen:3> -> <gen:4>
+                   - EntityQuerySpaceImpl(uid=<gen:4>, entity=com.example.demo.model.persistence.Cart)
+                      - SQL table alias mapping - cart2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+
+11:34:33.576 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.example.demo.model.persistence.UserOrder [READ]: select userorder0_.id as id1_4_0_, userorder0_.total as total2_4_0_, userorder0_.user_id as user_id3_4_0_, user1_.id as id1_3_1_, user1_.cart_id as cart_id4_3_1_, user1_.password as password2_3_1_, user1_.username as username3_3_1_, cart2_.id as id1_0_2_, cart2_.total as total2_0_2_ from user_order userorder0_ inner join user user1_ on userorder0_.user_id=user1_.id left outer join cart cart2_ on user1_.cart_id=cart2_.id where userorder0_.id=?
+11:34:33.578 [main] DEBUG org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity com.example.demo.model.persistence.UserOrder: select userorder0_.id as id1_4_1_, userorder0_.total as total2_4_1_, userorder0_.user_id as user_id3_4_1_, items1_.user_order_id as user_ord1_5_3_, item2_.id as items_id2_5_3_, item2_.id as id1_2_0_, item2_.description as descript2_2_0_, item2_.name as name3_2_0_, item2_.price as price4_2_0_ from user_order userorder0_ left outer join user_order_items items1_ on userorder0_.id=items1_.user_order_id left outer join item item2_ on items1_.items_id=item2_.id where userorder0_.id=?
+11:34:33.579 [main] DEBUG org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity com.example.demo.model.persistence.UserOrder: select userorder0_.id as id1_4_1_, userorder0_.total as total2_4_1_, userorder0_.user_id as user_id3_4_1_, items1_.user_order_id as user_ord1_5_3_, item2_.id as items_id2_5_3_, item2_.id as id1_2_0_, item2_.description as descript2_2_0_, item2_.name as name3_2_0_, item2_.price as price4_2_0_ from user_order userorder0_ left outer join user_order_items items1_ on userorder0_.id=items1_.user_order_id left outer join item item2_ on items1_.items_id=item2_.id where userorder0_.id=?
+11:34:33.579 [main] DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: com.example.demo.model.persistence.User
+11:34:33.579 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Version select: select id from user where id =?
+11:34:33.579 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Snapshot select: select user_.id, user_.cart_id as cart_id4_3_, user_.password as password2_3_, user_.username as username3_3_ from user user_ where user_.id=?
+11:34:33.580 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Insert 0: insert into user (cart_id, password, username, id) values (?, ?, ?, ?)
+11:34:33.580 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Update 0: update user set cart_id=?, password=?, username=? where id=?
+11:34:33.580 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Delete 0: delete from user where id=?
+11:34:33.580 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Identity insert: insert into user (id, cart_id, password, username) values (null, ?, ?, ?)
+11:34:33.580 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4e50ae56]
+11:34:33.580 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : cart
+11:34:33.581 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@9be7319]
+11:34:33.581 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : cart.items
+11:34:33.581 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@42730828]
+11:34:33.581 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@18c7f6b5]
+11:34:33.581 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : cart.total
+11:34:33.581 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : cart.user
+11:34:33.581 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Property path deemed to be circular : cart.user
+11:34:33.582 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : password
+11:34:33.582 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : username
+11:34:33.582 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+11:34:33.582 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+11:34:33.583 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.example.demo.model.persistence.User)
+    - Returns
+       - EntityReturnImpl(entity=com.example.demo.model.persistence.User, querySpaceUid=<gen:0>, path=com.example.demo.model.persistence.User)
+          - EntityAttributeFetchImpl(entity=com.example.demo.model.persistence.Cart, querySpaceUid=<gen:1>, path=com.example.demo.model.persistence.User.cart)
+             - CollectionAttributeFetchImpl(collection=com.example.demo.model.persistence.Cart.items, querySpaceUid=<gen:2>, path=com.example.demo.model.persistence.User.cart.items)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.example.demo.model.persistence.Item, querySpaceUid=<gen:3>, path=com.example.demo.model.persistence.User.cart.items.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.demo.model.persistence.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_3_0_}
+          - JOIN (JoinDefinedByMetadata(cart)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.example.demo.model.persistence.Cart)
+                - SQL table alias mapping - cart1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_0_1_}
+
+11:34:33.584 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.example.demo.model.persistence.User [NONE]: select user0_.id as id1_3_0_, user0_.cart_id as cart_id4_3_0_, user0_.password as password2_3_0_, user0_.username as username3_3_0_, cart1_.id as id1_0_1_, cart1_.total as total2_0_1_ from user user0_ left outer join cart cart1_ on user0_.cart_id=cart1_.id where user0_.id=?
+11:34:33.584 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@629b780f]
+11:34:33.584 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : cart
+11:34:33.584 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@609b041c]
+11:34:33.584 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : cart.items
+11:34:33.585 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@7e2c6702]
+11:34:33.585 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5fb7ab9c]
+11:34:33.585 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : cart.total
+11:34:33.585 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : cart.user
+11:34:33.585 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Property path deemed to be circular : cart.user
+11:34:33.586 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : password
+11:34:33.586 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : username
+11:34:33.586 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+11:34:33.587 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+11:34:33.587 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.example.demo.model.persistence.User)
+    - Returns
+       - EntityReturnImpl(entity=com.example.demo.model.persistence.User, querySpaceUid=<gen:0>, path=com.example.demo.model.persistence.User)
+          - EntityAttributeFetchImpl(entity=com.example.demo.model.persistence.Cart, querySpaceUid=<gen:1>, path=com.example.demo.model.persistence.User.cart)
+             - CollectionAttributeFetchImpl(collection=com.example.demo.model.persistence.Cart.items, querySpaceUid=<gen:2>, path=com.example.demo.model.persistence.User.cart.items)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.example.demo.model.persistence.Item, querySpaceUid=<gen:3>, path=com.example.demo.model.persistence.User.cart.items.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.demo.model.persistence.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_3_0_}
+          - JOIN (JoinDefinedByMetadata(cart)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.example.demo.model.persistence.Cart)
+                - SQL table alias mapping - cart1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_0_1_}
+
+11:34:33.588 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.example.demo.model.persistence.User [READ]: select user0_.id as id1_3_0_, user0_.cart_id as cart_id4_3_0_, user0_.password as password2_3_0_, user0_.username as username3_3_0_, cart1_.id as id1_0_1_, cart1_.total as total2_0_1_ from user user0_ left outer join cart cart1_ on user0_.cart_id=cart1_.id where user0_.id=?
+11:34:33.591 [main] DEBUG org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity com.example.demo.model.persistence.User: select user0_.id as id1_3_1_, user0_.cart_id as cart_id4_3_1_, user0_.password as password2_3_1_, user0_.username as username3_3_1_, cart1_.id as id1_0_0_, cart1_.total as total2_0_0_ from user user0_ left outer join cart cart1_ on user0_.cart_id=cart1_.id where user0_.id=?
+11:34:33.592 [main] DEBUG org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity com.example.demo.model.persistence.User: select user0_.id as id1_3_1_, user0_.cart_id as cart_id4_3_1_, user0_.password as password2_3_1_, user0_.username as username3_3_1_, cart1_.id as id1_0_0_, cart1_.total as total2_0_0_ from user user0_ left outer join cart cart1_ on user0_.cart_id=cart1_.id where user0_.id=?
+11:34:33.594 [main] DEBUG org.hibernate.loader.Loader - Static select for entity com.example.demo.model.persistence.User [NONE]: select user0_.id as id1_3_1_, user0_.cart_id as cart_id4_3_1_, user0_.password as password2_3_1_, user0_.username as username3_3_1_, cart1_.id as id1_0_0_, cart1_.total as total2_0_0_ from user user0_ left outer join cart cart1_ on user0_.cart_id=cart1_.id where user0_.cart_id=?
+11:34:33.595 [main] DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: com.example.demo.model.persistence.Item
+11:34:33.595 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Version select: select id from item where id =?
+11:34:33.595 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Snapshot select: select item_.id, item_.description as descript2_2_, item_.name as name3_2_, item_.price as price4_2_ from item item_ where item_.id=?
+11:34:33.595 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Insert 0: insert into item (description, name, price, id) values (?, ?, ?, ?)
+11:34:33.595 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Update 0: update item set description=?, name=?, price=? where id=?
+11:34:33.595 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Delete 0: delete from item where id=?
+11:34:33.596 [main] DEBUG o.h.p.entity.AbstractEntityPersister -  Identity insert: insert into item (id, description, name, price) values (null, ?, ?, ?)
+11:34:33.596 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@38f617f4]
+11:34:33.599 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : description
+11:34:33.599 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : name
+11:34:33.599 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : price
+11:34:33.600 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+11:34:33.600 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+11:34:33.601 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.example.demo.model.persistence.Item)
+    - Returns
+       - EntityReturnImpl(entity=com.example.demo.model.persistence.Item, querySpaceUid=<gen:0>, path=com.example.demo.model.persistence.Item)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.demo.model.persistence.Item)
+          - SQL table alias mapping - item0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+11:34:33.601 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.example.demo.model.persistence.Item [NONE]: select item0_.id as id1_2_0_, item0_.description as descript2_2_0_, item0_.name as name3_2_0_, item0_.price as price4_2_0_ from item item0_ where item0_.id=?
+11:34:33.601 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3dea226b]
+11:34:33.601 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : description
+11:34:33.601 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : name
+11:34:33.602 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : price
+11:34:33.602 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+11:34:33.602 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+11:34:33.602 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=com.example.demo.model.persistence.Item)
+    - Returns
+       - EntityReturnImpl(entity=com.example.demo.model.persistence.Item, querySpaceUid=<gen:0>, path=com.example.demo.model.persistence.Item)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.demo.model.persistence.Item)
+          - SQL table alias mapping - item0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+
+11:34:33.603 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity com.example.demo.model.persistence.Item [READ]: select item0_.id as id1_2_0_, item0_.description as descript2_2_0_, item0_.name as name3_2_0_, item0_.price as price4_2_0_ from item item0_ where item0_.id=?
+11:34:33.604 [main] DEBUG org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity com.example.demo.model.persistence.Item: select item0_.id as id1_2_0_, item0_.description as descript2_2_0_, item0_.name as name3_2_0_, item0_.price as price4_2_0_ from item item0_ where item0_.id=?
+11:34:33.604 [main] DEBUG org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity com.example.demo.model.persistence.Item: select item0_.id as id1_2_0_, item0_.description as descript2_2_0_, item0_.name as name3_2_0_, item0_.price as price4_2_0_ from item item0_ where item0_.id=?
+11:34:33.610 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@6d4a05f7]
+11:34:33.613 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@51d8f2f2]
+11:34:33.614 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : description
+11:34:33.614 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : name
+11:34:33.614 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : price
+11:34:33.614 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+11:34:33.620 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+11:34:33.621 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(collection=com.example.demo.model.persistence.Cart.items)
+    - Returns
+       - CollectionReturnImpl(collection=com.example.demo.model.persistence.Cart.items, querySpaceUid=<gen:0>, path=[com.example.demo.model.persistence.Cart.items])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.example.demo.model.persistence.Item, querySpaceUid=<gen:1>, path=[com.example.demo.model.persistence.Cart.items].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.example.demo.model.persistence.Cart.items)
+          - SQL table alias mapping - items0_
+          - alias suffix - 0_
+          - suffixed key columns - {cart_id1_1_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_2_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.example.demo.model.persistence.Item)
+                - SQL table alias mapping - item1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_2_1_}
+
+11:34:33.622 [main] DEBUG o.h.l.c.plan.CollectionLoader - Static select for collection com.example.demo.model.persistence.Cart.items: select items0_.cart_id as cart_id1_1_0_, items0_.items_id as items_id2_1_0_, item1_.id as id1_2_1_, item1_.description as descript2_2_1_, item1_.name as name3_2_1_, item1_.price as price4_2_1_ from cart_items items0_ inner join item item1_ on items0_.items_id=item1_.id where items0_.cart_id=?
+11:34:33.622 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@4d43a1b7]
+11:34:33.622 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5b14f482]
+11:34:33.622 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : description
+11:34:33.622 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : name
+11:34:33.623 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : price
+11:34:33.627 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+11:34:33.627 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+11:34:33.629 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(collection=com.example.demo.model.persistence.UserOrder.items)
+    - Returns
+       - CollectionReturnImpl(collection=com.example.demo.model.persistence.UserOrder.items, querySpaceUid=<gen:0>, path=[com.example.demo.model.persistence.UserOrder.items])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.example.demo.model.persistence.Item, querySpaceUid=<gen:1>, path=[com.example.demo.model.persistence.UserOrder.items].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.example.demo.model.persistence.UserOrder.items)
+          - SQL table alias mapping - items0_
+          - alias suffix - 0_
+          - suffixed key columns - {user_ord1_5_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_2_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.example.demo.model.persistence.Item)
+                - SQL table alias mapping - item1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_2_1_}
+
+11:34:33.630 [main] DEBUG o.h.l.c.plan.CollectionLoader - Static select for collection com.example.demo.model.persistence.UserOrder.items: select items0_.user_order_id as user_ord1_5_0_, items0_.items_id as items_id2_5_0_, item1_.id as id1_2_1_, item1_.description as descript2_2_1_, item1_.name as name3_2_1_, item1_.price as price4_2_1_ from user_order_items items0_ inner join item item1_ on items0_.items_id=item1_.id where items0_.user_order_id=?
+11:34:33.815 [main] DEBUG org.hibernate.SQL - create table cart (id bigint generated by default as identity, total decimal(19,2), primary key (id))
+11:34:33.861 [main] DEBUG org.hibernate.SQL - create table cart_items (cart_id bigint not null, items_id bigint not null)
+11:34:33.868 [main] DEBUG org.hibernate.SQL - create table item (id bigint generated by default as identity, description varchar(255) not null, name varchar(255) not null, price decimal(19,2) not null, primary key (id))
+11:34:33.873 [main] DEBUG org.hibernate.SQL - create table user (id bigint generated by default as identity, password varchar(255) not null, username varchar(255) not null, cart_id bigint, primary key (id))
+11:34:33.876 [main] DEBUG org.hibernate.SQL - create table user_order (id bigint generated by default as identity, total decimal(19,2), user_id bigint not null, primary key (id))
+11:34:33.882 [main] DEBUG org.hibernate.SQL - create table user_order_items (user_order_id bigint not null, items_id bigint not null)
+11:34:33.884 [main] DEBUG org.hibernate.SQL - alter table user drop constraint if exists UK_sb8bbouer5wak8vyiiy4pf2bx
+11:34:33.885 [main] DEBUG org.hibernate.SQL - alter table user add constraint UK_sb8bbouer5wak8vyiiy4pf2bx unique (username)
+11:34:33.890 [main] DEBUG org.hibernate.SQL - alter table cart_items add constraint FKbgmrxyvqs3kxt1im75fde3psy foreign key (items_id) references item
+11:34:33.911 [main] DEBUG org.hibernate.SQL - alter table cart_items add constraint FK99e0am9jpriwxcm6is7xfedy3 foreign key (cart_id) references cart
+11:34:33.913 [main] DEBUG org.hibernate.SQL - alter table user add constraint FKtqa69bib34k2c0jhe7afqsao6 foreign key (cart_id) references cart
+11:34:33.916 [main] DEBUG org.hibernate.SQL - alter table user_order add constraint FKj86u1x7csa8yd68ql2y1ibrou foreign key (user_id) references user
+11:34:33.920 [main] DEBUG org.hibernate.SQL - alter table user_order_items add constraint FKghpu6f1jrpho0deyeltq47u2u foreign key (items_id) references item
+11:34:33.923 [main] DEBUG org.hibernate.SQL - alter table user_order_items add constraint FKt6k533isn84ef898d6sln1xna foreign key (user_order_id) references user_order
+11:34:33.938 [main] DEBUG o.h.query.spi.NamedQueryRepository - Checking 0 named HQL queries
+11:34:33.939 [main] DEBUG o.h.query.spi.NamedQueryRepository - Checking 0 named SQL queries
+11:34:33.945 [main] DEBUG o.h.internal.SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@3b8507df
+11:34:33.945 [main] DEBUG o.h.internal.SessionFactoryRegistry - Registering SessionFactory: 01d0b302-860c-4cb9-bea2-5b7fe0e71ae7 (<unnamed>)
+11:34:33.945 [main] DEBUG o.h.internal.SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+11:34:33.945 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:34:33.964 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'delegatingApplicationListener'
+11:34:33.984 [main] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+11:34:33.998 [main] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+11:34:34.004 [main] DEBUG o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from URL [file:/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes/data.sql]
+11:34:34.008 [main] DEBUG o.s.jdbc.datasource.init.ScriptUtils - 1 returned as update count for SQL: insert into item (name, price, description) values ('Round Widget', 2.99, 'A widget that is round')
+11:34:34.015 [main] DEBUG o.s.jdbc.datasource.init.ScriptUtils - 1 returned as update count for SQL: insert into item (name, price, description) values ('Square Widget', 1.99, 'A widget that is square')
+11:34:34.016 [main] DEBUG o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from URL [file:/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes/data.sql] in 12 ms.
+11:34:34.016 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'ECommerceApplication'
+11:34:34.035 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'cartController'
+11:34:34.051 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userRepository'
+11:34:34.287 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jpaMappingContext'
+11:34:34.301 [main] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Initializing JpaMetamodelMappingContext…
+11:34:34.356 [main] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Finished initializing JpaMetamodelMappingContext!
+11:34:34.416 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+11:34:34.562 [main] DEBUG o.h.s.internal.StatisticsInitiator - Statistics initialized [enabled=false]
+11:34:34.579 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+11:34:34.723 [main] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.example.demo.model.persistence.repositories.UserRepository…
+11:34:34.818 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+11:34:34.922 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+11:34:34.964 [main] DEBUG o.s.d.j.r.query.JpaQueryFactory - Looking up query for method findByUsername
+11:34:34.969 [main] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query User.findByUsername
+11:34:34.975 [main] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:34:34.975 [main] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByUsername
+11:34:35.016 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+11:34:35.325 [main] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.example.demo.model.persistence.repositories.UserRepository.
+11:34:35.341 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'cartRepository'
+11:34:35.355 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+11:34:35.360 [main] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for com.example.demo.model.persistence.repositories.CartRepository…
+11:34:35.364 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+11:34:35.365 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+11:34:35.376 [main] DEBUG o.s.d.j.r.query.JpaQueryFactory - Looking up query for method findByUser
+11:34:35.383 [main] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query Cart.findByUser
+11:34:35.385 [main] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+11:34:35.397 [main] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Cart.findByUser
+11:34:35.397 [main] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+11:35:03.248 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:35:39.711 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:36:19.718 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:36:57.531 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:37:32.165 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:38:07.238 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:38:43.757 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:39:19.363 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:39:59.433 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:40:36.987 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:41:15.744 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:41:52.657 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:43:09.840 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m5s576ms63µs426ns).
+11:43:09.851 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:43:09.865 [main] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for com.example.demo.model.persistence.repositories.CartRepository.
+11:43:09.999 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'itemRepository'
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[ERROR] There are test failures.
+
+Please refer to /var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/surefire-reports for the individual test results.
+Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+Command was /bin/sh -c cd /var/jenkins_home/workspace/mySecondJob/ECommerceApp && /opt/java/openjdk/jre/bin/java -jar /var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/surefire/surefirebooter1577794229673172917.jar /var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/surefire 2021-04-22T11-34-22_037-jvmRun1 surefire8462130679089044159tmp surefire_02249388961169052959tmp
+Error occurred in starting fork, check output in log
+Process Exit Code: 1
+org.apache.maven.surefire.booter.SurefireBooterForkException: The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+Command was /bin/sh -c cd /var/jenkins_home/workspace/mySecondJob/ECommerceApp && /opt/java/openjdk/jre/bin/java -jar /var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/surefire/surefirebooter1577794229673172917.jar /var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/surefire 2021-04-22T11-34-22_037-jvmRun1 surefire8462130679089044159tmp surefire_02249388961169052959tmp
+Error occurred in starting fork, check output in log
+Process Exit Code: 1
+	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:669)
+	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:282)
+	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:245)
+	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1183)
+	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:1011)
+	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:857)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.jvnet.hudson.maven3.launcher.Maven35Launcher.main(Maven35Launcher.java:130)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at jenkins.maven3.agent.Maven35Main.launch(Maven35Main.java:178)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at hudson.maven.Maven3Builder.call(Maven3Builder.java:139)
+	at hudson.maven.Maven3Builder.call(Maven3Builder.java:70)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:211)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+	at hudson.remoting.Request$2.run(Request.java:376)
+	at hudson.remoting.InterceptingExecutorService.lambda$wrap$0(InterceptingExecutorService.java:78)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[JENKINS] Recording test results
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.2:war (default-war) @ ECommerceApp ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [ECommerceApp] in [/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/ECommerceApp-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Webapp assembled in [631 msecs]
+[INFO] Building war: /var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/ECommerceApp-0.0.1-SNAPSHOT.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.5.RELEASE:repackage (repackage) @ ECommerceApp ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ ECommerceApp ---
+[INFO] Installing /var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/ECommerceApp-0.0.1-SNAPSHOT.war to /root/.m2/repository/com/example/ECommerceApp/0.0.1-SNAPSHOT/ECommerceApp-0.0.1-SNAPSHOT.war
+[INFO] Installing /var/jenkins_home/workspace/mySecondJob/ECommerceApp/pom.xml to /root/.m2/repository/com/example/ECommerceApp/0.0.1-SNAPSHOT/ECommerceApp-0.0.1-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ ECommerceApp ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ ECommerceApp ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to /var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ ECommerceApp ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/mySecondJob/ECommerceApp/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ ECommerceApp ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ ECommerceApp ---
+[INFO] Skipping execution of surefire because it has already been run for this configuration
+[JENKINS] Recording test results
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.2:war (default-war) @ ECommerceApp ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [ECommerceApp] in [/var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/ECommerceApp-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Webapp assembled in [305 msecs]
+[INFO] Building war: /var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/ECommerceApp-0.0.1-SNAPSHOT.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.5.RELEASE:repackage (repackage) @ ECommerceApp ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  09:11 min
+[INFO] Finished at: 2021-04-22T11:43:25Z
+[INFO] ------------------------------------------------------------------------
+Waiting for Jenkins to finish collecting data
+[JENKINS] Archiving /var/jenkins_home/workspace/mySecondJob/ECommerceApp/pom.xml to com.example/ECommerceApp/0.0.1-SNAPSHOT/ECommerceApp-0.0.1-SNAPSHOT.pom
+[JENKINS] Archiving /var/jenkins_home/workspace/mySecondJob/ECommerceApp/target/ECommerceApp-0.0.1-SNAPSHOT.war to com.example/ECommerceApp/0.0.1-SNAPSHOT/ECommerceApp-0.0.1-SNAPSHOT.war
+channel stopped
+SSH: Connecting from host [e4332dd570f3]
+SSH: Connecting with configuration [Host_2] ...
+SSH: Creating session: username [host2admin], hostname [172.31.26.219], port [22]
+SSH: Connecting session ...
+SSH: Connected
+SSH: Opening SFTP channel ...
+SSH: SFTP channel open
+SSH: Connecting SFTP channel ...
+SSH: Connected
+SSH: Remote root is not absolute, getting absolute directory from PWD
+SSH: cd [/home/host2admin]
+SSH: OK
+SSH: cd [/opt//docker]
+SSH: OK
+SSH: put [ECommerceApp-0.0.1-SNAPSHOT.war]
+SSH: OK
+SSH: Opening exec channel ...
+SSH: EXEC: channel open
+SSH: EXEC: STDOUT/STDERR from command [docker stop demo_container;  
+docker rm -f demo_container;
+docker stop demo_image;  
+docker rm -f demo_image; 
+docker image rm -f demo_image; 
+cd /opt/docker; 
+docker build -t demo_image .] ...
+SSH: EXEC: connected
+Error response from daemon: No such container: demo_container
+Error: No such container: demo_container
+Error response from daemon: No such container: demo_image
+Error: No such container: demo_image
+Error: No such image: demo_image
+Sending build context to Docker daemon  38.68MB
+
+Step 1/3 : From tomcat:8-jre8
+ ---> 3639174793ba
+Step 2/3 : MAINTAINER "Udacity"
+ ---> Using cache
+ ---> f97c4921bd10
+Step 3/3 : COPY ./*.war /usr/local/tomcat/webapps
+ ---> c43bb391d6a5
+Successfully built c43bb391d6a5
+Successfully tagged demo_image:latest
+SSH: EXEC: completed after 2,002 ms
+SSH: Opening exec channel ...
+SSH: EXEC: channel open
+SSH: EXEC: STDOUT/STDERR from command [docker run -d --name demo_container -p 8888:8080 demo_image] ...
+SSH: EXEC: connected
+7dae9f65c2eea678f866c9f0bae45d5b352358eeae58b58cc41b9e6f252e7375
+SSH: EXEC: completed after 806 ms
+SSH: Disconnecting configuration [Host_2] ...
+SSH: Transferred 1 ( 1 + 0 ) file(s)
+Finished: SUCCESS
